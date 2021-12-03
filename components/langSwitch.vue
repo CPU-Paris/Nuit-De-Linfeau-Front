@@ -1,10 +1,10 @@
 <template>
   <div class="langSwitch">
     <nuxt-link :class="{'disabled': $i18n.locale != 'en'}" :to="switchLocalePath('fr')">
-        <img class="langFlag" src="/img/EN_lang.svg" alt="English" />
+        <img class="langFlag" src="/img/EN_lang.svg" :alt="$t('english')" />
     </nuxt-link>
     <nuxt-link :class="{'disabled': $i18n.locale != 'fr'}" :to="switchLocalePath('en')">
-        <img class="langFlag" src="/img/FR_lang.svg" alt="French" />
+        <img class="langFlag" src="/img/FR_lang.svg" :alt="$t('french')" />
     </nuxt-link>
   </div>
 </template>

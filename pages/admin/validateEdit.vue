@@ -6,7 +6,7 @@
       </list-action>
     </div>
     <div class="right-half validateDifferences">
-      <h2>Differences :</h2>
+      <h2>{{ $t('differences') }}</h2>
       <code-diff :old-string="curr" :new-string="next" :context="10" />
     </div>
   </div>
@@ -43,11 +43,11 @@ export default {
       this.next = obj.after;
     },
     accept(e) {
-      alert("Accept "+e.keyprop);
+      alert("Accepted "+e.keyprop);
       this._removeFromArray(e.keyprop);
     },
     reject(e) {
-      alert("Reject "+e.keyprop);
+      alert("Rejected "+e.keyprop);
       this._removeFromArray(e.keyprop);
     },
     _removeFromArray(keyprop) {
@@ -59,7 +59,7 @@ export default {
 
 <style>
 .validateEditPage {
-  background-color: var(--defaultLight);
+  background-color: var(--default);
   border-radius: 2.1em;
   margin: 0 2em;
 }

@@ -20,7 +20,7 @@ export default {
         },
         md: {
             type: String,
-            default: "## type your markdown here"
+            default: "Message"
         }
     },
     mounted() {

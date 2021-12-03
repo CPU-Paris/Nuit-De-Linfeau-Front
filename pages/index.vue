@@ -26,7 +26,7 @@ export default {
   font-size: 1em;
 }
 #indexpage>p {
-  color: #678983;
+  color: var(--default);
   text-align: center;
   font-weight: 500;
 }

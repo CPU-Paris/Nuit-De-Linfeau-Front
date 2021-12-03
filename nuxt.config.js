@@ -34,7 +34,6 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     'nuxt-vite',
-    '@nuxtjs/fontawesome', 
     '@nuxtjs/i18n'
   ],
 
@@ -58,12 +57,6 @@ export default {
     detectBrowserLanguage: {
       useCookie: false,
       cookieKey: "i18n_redirected"
-    }
-  },
-  fontawesome: {
-    icons: {
-      solid: true,
-      brands: true
     }
   },
 

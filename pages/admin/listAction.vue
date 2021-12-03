@@ -57,8 +57,8 @@ export default {
     padding: 0.1em 1em;
     margin: 1em;
     border-radius: 2em;
-    background: var(--secondaryLight);
-    color: var(--fontLight);
+    background: var(--secondary);
+    color: var(--font);
     text-decoration: none;
 }
 .listActionComponent img {
@@ -70,7 +70,7 @@ export default {
     display: none;
 }
 .listActionComponent.selected {
-    background: var(--primaryLight);
+    background: var(--primary);
 }
 .listActionComponent.selected .acceptRejectBtn {
     display: block;

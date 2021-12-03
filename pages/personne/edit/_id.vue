@@ -2,20 +2,23 @@
     <div class="personneSearch">
 
         <h2>{{name}}</h2>
-
-        <p>{{bio === null ? "Vide" : bio.texte}}</p>
+        <adminMarkdown ref="dest"></adminMarkdown>
+        <button @click="editBio">{{$t('enregistrer')}}</button>
     </div>
 </template>
 
 <script>
 import axios from "axios";
+import markdown from '~/components/admin/markdown.vue';
 
 export default {
+  components: { markdown },
     data() {
         return {
             id: this.$route.params.id,
             name: '',
-            bio: ''
+            bio: '',
+            bioCache: ''
         }
     },
     mounted() {
@@ -25,7 +28,15 @@ export default {
                 console.log(response)
                 this.name = response.data.nom_prenom
                 this.bio = response.data.bio
+                this.bioCache = response.data.bio
             });
+    },
+    methods: {
+        editBio() {
+            axios
+                .post("https://api.nuit.jiveoff.fr/texte/modifications/", {texte: this.bioCache, texteModifie: this.$refs.dest.getinput()})
+            document.location.href = "/personne/" + this.id;  
+        }
     }
 }
 </script>

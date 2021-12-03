@@ -1,8 +1,22 @@
 {
-  "hello": "bonjour",
-  "hey": "YOOOOO !!! (langue: fr)",
-  "bold-text": "Theme noir",
-  "les-sauveteurs-silencieux": "Les sauveteurs silencieux",
-  "sauvetages-effectues": "aucun sauvetage effectué | sauvetage {nb} effectué |  sauvetages {nb} effectués",
-  "home-catchphrase": "“Retrouvez les sauveteurs et sauvés à Dunkerque”"
+  "sauvetages-effectues": "aucun sauvetage effectué | {nb} sauvetage effectué |  {nb} sauvetages effectués",
+  "home-catchphrase": "“Retrouvez les sauveteurs et sauvés à Dunkerque”",
+  "nom-and-prenom": "Nom & Prénom",
+  "biographie": "Biographie",
+  "enregistrer": "Enregistrer",
+  "differences": "Différences :",
+  "type-your-markdown-here": "## entrez votre article sous forme de fichier markdown ici",
+  "no-title-provided": "Aucun titre donné",
+  "bonjour": "bonjour",
+  "recherche": "Recherche...",
+  "reject-svg": "Rejetter SVG",
+  "prenom": "prénom",
+  "nom": "nom",
+  "date-naissance": "date naissance",
+  "date-mort": "date mort",
+  "role": "rôle",
+  "une-description": "une **description**",
+  "english": "Anglais",
+  "french": "Français",
+  "fermer": "fermer"
 }

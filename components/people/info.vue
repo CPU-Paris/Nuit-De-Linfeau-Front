@@ -24,14 +24,14 @@ export default {
   data() {
     return {
       result: {
-        firstname: 'prénom',
-        lastname: 'nom',
-        date_of_birth: 'date naissance',
-        date_of_death: 'date mort',
-        job: 'rôle',
+        firstname: $t('prenom'),
+        lastname: $t('nom'),
+        date_of_birth: $t('date-naissance'),
+        date_of_death: $t('date-mort'),
+        job: $t('role'),
         nb_rescues: 0,
         picture: '#',
-        description: 'une **description**'
+        description: $t('une-description')
       },
     }
   },

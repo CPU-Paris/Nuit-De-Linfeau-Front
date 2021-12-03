@@ -16,12 +16,13 @@ export default {
 
     data() {
         return {
-            darkTheme: true
+            darkTheme: false
         }
     },
     methods: {
         switchTheme() {
             this.darkTheme = !this.darkTheme;
+            this.$emit('themeChanged', this.darkTheme);
         }
     }
 }

@@ -4,7 +4,7 @@
           <slot/>
       </div>
       <div>
-          <button @click="hide">fermer</button>
+          <button @click="hide">$t('fermer')</button>
       </div>
   </div>
 </template>

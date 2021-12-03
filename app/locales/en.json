@@ -1,8 +1,22 @@
 {
-  "hello": "hello",
-  "hey": "Heyyyy ! (langue EN)",
-  "bold-text": "Dark theme",
-  "les-sauveteurs-silencieux": "Les sauveteurs silencieux",
-  "sauvetages-effectues": "sauvetages effectués",
-  "home-catchphrase": ""
+  "sauvetages-effectues": "no rescue performed | {nb} rescue performed |  {nb} rescues performed",
+  "home-catchphrase": "“Find the rescuers and rescued of Dunkerque”",
+  "nom-and-prenom": "Surname & Firstname",
+  "biographie": "Biography",
+  "enregistrer": "save",
+  "differences": "Differences :",
+  "type-your-markdown-here": "## type your markdown here",
+  "no-title-provided": "No title provided",
+  "bonjour": "hello",
+  "recherche": "search...",
+  "reject-svg": "Reject SVG",
+  "prenom": "first name",
+  "nom": "surname",
+  "date-naissance": "birth date",
+  "date-mort": "death date",
+  "role": "role",
+  "une-description": "a **description**",
+  "english": "English",
+  "french": "French",
+  "fermer": "Close"
 }

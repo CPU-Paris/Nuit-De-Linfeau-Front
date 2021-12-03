@@ -5,13 +5,17 @@
       type="text"
       v-model="search"
       @input="fetchInput"
-      placeholder="Recherche..."
+      :placeholder="$t('recherche')"
     />
     <ul>
       <li v-for="item in result" :key="item.id">
-        <a href="">{{ item.nom_prenom }}</a>
+        <a :href="'/personne/' + item.id">{{ item.nom_prenom }}</a>
       </li>
     </ul>
+
+    <a class="addComponent" href="/personne/add">
+      <img src="/img/reject.svg" :alt="$t('reject-svg')">
+    </a>
   </div>
 </template>
 
@@ -37,9 +41,18 @@ export default {
         .get("https://api.nuit.jiveoff.fr/personnes/" + this.search)
         .then((response) => {
             console.log(response)
-          this.result = [...response.data];
-          this.result.length = this.result.length > 4 ? 4 : this.result.length;
+            this.result = [...response.data];
+            this.result.length = this.result.length > 4 ? 4 : this.result.length;
         });
+
+        axios
+        .get("https://api.nuit.jiveoff.fr/bateaux/" + this.search)
+        .then((response) => {
+            console.log(response)
+            this.result = [...this.result, ...response.data];
+            this.result.length = this.result.length > 4 ? 4 : this.result.length;
+        });
+      
     },
   },
 };
@@ -60,10 +73,10 @@ export default {
   max-width: 25em;
   font-size: 24px;
   border: none;
-  color: #b3984c;
+  color:var(--font);
   padding: 0.7em;
   margin: 0.7em;
-  background-color: #f5f0e0;
+  background-color: var(--secondary);
   border-radius: 2em;
 }
 
@@ -72,7 +85,7 @@ export default {
   top: 70%;
   width: 100%;
   padding: 0;
-  background-color: #678983;
+  background-color: var(--default);
   border-radius: 32px;
 }
 
@@ -87,8 +100,13 @@ export default {
     margin: 8px;
     padding: 16px 8px 16px 32px;
     font-size: 24px;
-    color: #b3984c;
-    background-color: #f5f0e0;
+    color: var(--font);
+    background-color: var(--secondary);
     text-decoration: none;
+}
+
+.addComponent {
+  transform: scale(.5) rotate(45deg);
+
 }
 </style>

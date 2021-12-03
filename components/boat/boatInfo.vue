@@ -1,6 +1,6 @@
 <template>
     <div id="page" class="">
-        bonjour
+        {{ $t('bonjour') }}
         <div id="text">
             <div id="gradient">
 
