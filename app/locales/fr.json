@@ -1,4 +1,7 @@
 {
   "hello": "bonjour",
-  "hey": "YOOOOO !!! (langue: fr)"
+  "hey": "YOOOOO !!! (langue: fr)",
+  "bold-text": "Theme noir",
+  "les-sauveteurs-silencieux": "Les sauveteurs silencieux",
+  "sauvetages-effectues": "aucun sauvetage effectué | sauvetage {nb} effectué |  sauvetages {nb} effectués"
 }
