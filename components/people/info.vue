@@ -10,11 +10,12 @@
 
     <div>
 
-        Info : Pour inclure une variable dans un paramètre, on utilise :leParam="lavariable"
-
         <img :src="result.picture">
     </div>
 
+    <div>
+        <adminMarkdown :md="result.description" noEdit/>
+    </div>
   </div>
 </template>
 
@@ -29,7 +30,8 @@ export default {
         date_of_death: 'date mort',
         job: 'rôle',
         nb_rescues: 0,
-        picture: '#'
+        picture: '#',
+        description: 'une **description**'
       },
     }
   },
