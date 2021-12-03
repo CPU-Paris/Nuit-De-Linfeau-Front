@@ -1,7 +1,9 @@
 <template>
   <div class="nuxt_tag">
     <header>
-      <logo />
+      <nuxt-link to="/">
+        <logo />
+      </nuxt-link>
       <div class="separator"></div>
       <theme-switcher />
       <lang-switch />
@@ -21,6 +23,27 @@ export default {
 </script>
 
 <style>
+
+:root {
+
+  --primaryLight: #E6DDC4;
+  --secondaryLight: #F5F0E0;
+  --defaultLight: #678983;
+  --fontLight: #B3984C;
+  --imgFontLight: #181D31;
+  --imgFirstCol: #F87D38;
+  --imgSecondCol: #F1F1F1;
+
+  --primaryDark: #864879;
+  --secondaryDark: #E9A6A6;
+  --defaultDark: #3F3351;
+  --fontDark: #42243C;
+  --imgFontDark: #1F1D36;
+  --imgFirstCol: #D55A15;
+  --imgSecondCol: #DCDCDC;
+
+}
+
 body {
   margin: 0;
 }
@@ -28,7 +51,7 @@ body {
     font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background: #E6DDC4;
 }
 .nuxt_tag {
@@ -48,7 +71,7 @@ header {
   height: 7em;
   display: flex;
 }
-header>.logoDunkerque {
+header .logoDunkerque {
   width: auto;
   height: 100%;
 }

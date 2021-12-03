@@ -3,7 +3,7 @@
 
         <h2>{{name}}</h2>
 
-        <p>{{bio}}</p>
+        <p>{{bio === null ? "Test" : bio}}</p>
     </div>
 </template>
 
@@ -24,7 +24,7 @@ export default {
             .then((response) => {
                 console.log(response)
                 this.name = response.data.nom_prenom
-                this.name = response.data.bio
+                this.bio = response.data.bio
             });
     }
 }
@@ -43,6 +43,11 @@ export default {
     .personneSearch h2 {
         font-size: 48px;
         margin: 16px
+    }
+
+    .personneSearch p {
+        font-size: 21px;
+        margin: 16px;
     }
 
 </style>

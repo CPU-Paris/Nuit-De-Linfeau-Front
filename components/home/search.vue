@@ -50,6 +50,9 @@ export default {
 .searchComponent {
   display: flex;
   justify-content: center;
+  width: fit-content;
+  position: relative;
+  margin: 0 auto;
 }
 
 .searchComponent .searchInput {
@@ -67,8 +70,7 @@ export default {
 .searchComponent ul {
   position: absolute;
   top: 70%;
-  left: 20px;
-  width: 110%;
+  width: 100%;
   padding: 0;
   background-color: #678983;
   border-radius: 32px;
