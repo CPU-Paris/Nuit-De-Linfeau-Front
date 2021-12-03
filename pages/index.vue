@@ -1,12 +1,7 @@
 <template>
-  <div id="page" :class="{'black': themeBlack == true}">
-    <lang-switch />
-    <p>{{ $t('les-sauveteurs-silencieux') }}</p>
-
-    <p>{{ $t("hey") }}</p>
+  <div id="indexpage" :class="{ black: themeBlack == true }">
+    <p>{{ $t('home-catchphrase') }}</p>
     <HomeSearch></HomeSearch>
-    <p>
-    </p>
   </div>
 </template>
 
@@ -18,34 +13,21 @@ export default {
   data() {
     return {
       counter: 0,
-      themeBlack: false
+      themeBlack: false,
     };
   },
-  methods: {
-  }
+  methods: {},
 };
+// todo : remove fontawesome
 </script>
 
 <style>
-#page {
+#indexpage {
   font-size: 1em;
-  background-color: #ecabab;
 }
-#page p {
-  color: #555;
+#indexpage>p {
+  color: #678983;
+  text-align: center;
+  font-weight: 500;
 }
-#page b {
-  color: #000;
-}
-
-#page.black {
-  background-color: #272626;
-}
-#page.black p {
-  color: #d9dad8;
-}
-#page.black b {
-  color: rgb(255, 255, 255);
-}
-
 </style>
